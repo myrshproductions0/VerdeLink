@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>VerdeLink | Contacto</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header class="header">
+        <div class="container header-flex">            
+            <h1 class="logo">VerdeLink</h1>
+            <nav class="main-nav">
+                <a href="index.html">Inicio</a>
+                <a href="servicios.html">Servicios</a>
+                <a href="contacto.html">Contacto</a>
+                <a href="ubicacion.html">Ubicación</a>
+                <a href="equipo.html">Equipo</a>
+                <a href="plan.html">Plan Estratégico</a>
+            </nav>
+        </div>
+    </header>
+    <section class="section">
+        <div class="container">
+            <h2>Contacto</h2>
+            <form id="investorForm" class="form-contacto">
+                <input type="text" id="investorName" placeholder="Nombre completo" required>
+                <input type="number" id="investAmount" placeholder="Monto de inversión (S/)" required>
+                <textarea id="msg" placeholder="Mensaje o propuesta"></textarea>
+
+                <button type="button" class="btn-enviar" onclick="validarInversion()">Enviar</button>
+                <button type="reset" class="btn-borrar">Borrar</button>
+
+                <p id="validationMessage"></p>
+            </form>
+        </div>
+    </section>
+</body>
+</html>

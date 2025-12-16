@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>VerdeLink | Inicio</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header class="header">
+        <div class="container header-flex">
+            <h1 class="logo"> VerdeLink</h1>
+            <nav class="main-nav">
+                <a href="inicio.html">Inicio</a>
+                <a href="servicios.html">Servicios</a>
+                <a href="contacto.html">Contacto</a>
+                <a href="ubicacion.html">Ubicacíon</a>
+                <a href="equipo.html">Equipo</a>
+                <a href="plan.html">Plan Estratégico</a>
+
+            </nav>
+        </div>
+    </header>
+    <section class="hero">
+        <div class="container hero-content">
+            <div class="hero-text">
+                <h2>Uniendo personas por un Perú sostenible</h2>
+                <p>Conectamos ciudadanos y recicladores formales para crear un impacto ambiental positivo.</p>
+                <a href="servicios.html" class="button hero-button"> Ver servicios</a>
+            </div>
+            <div class="hero-image">
+                <img src="recicl.jpg" alt="Reciclaje Sostenible">
+            </div>
+        </div>
+    </section>
+    <script>
+function validarInversion() {
+    const nombre = document.getElementById('investorName').value.trim();
+    const monto = document.getElementById('investAmount').value;
+    const mensaje = document.getElementById('msg').value.trim();
+    const minimoRequerido = 5000;
+    const messageElement = document.getElementById('validationMessage');
+
+    if (nombre === '' || monto === '' || mensaje === '') {
+        messageElement.style.color = '#FF4444';
+        messageElement.innerHTML = 'Por favor, complete todos los campos.';
+        return;
+    }
+
+    if (monto < minimoRequerido) {
+        messageElement.style.color = '#FFAA00';
+        messageElement.innerHTML =
+            `El monto mínimo para ser Inversor Ángel es S/ ${minimoRequerido}.`;
+    } else {
+        messageElement.style.color = '#1E7F5C';
+        messageElement.innerHTML =
+            `Gracias, ${nombre}. Su inversión de S/ ${monto} fue registrada correctamente.`;
+        document.getElementById('investorForm').reset();
+    }
+}
+</script>
+</body>
+</html>
